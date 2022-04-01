@@ -4,8 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 1s ease-in-out;
 
-  #quote-box {
+  #quoteBox {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -18,26 +19,41 @@
 #text{
   font-size: 1.5em;
   padding-bottom: 2em;
+  font-weight: 400;
+  transition:  color 1s ;
+
 }
 
 #author {
   font-size: 1.2em;
   padding-bottom: 2em;
+  font-weight: 200;
+  transition: color 1s ease-in-out;
 }
 
-#new-quote {
+#newQuote {
 color: white;
 border: none;
 font-size: 1em;
-padding: 0.5em;
+padding: 0.5em 0.6em;
+border-radius: 3px;
 }
 
-#btn-container {
+#newQuote:hover {
+  cursor: pointer;
+}
+
+#btnContainer {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row-reverse;
+  transition: 1s ease-in-out;
+#twitterIcon, #newQuote {
+  transition: 1s ease-in-out;
+
+}
 }
 
   }

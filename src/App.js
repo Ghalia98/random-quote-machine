@@ -1,6 +1,5 @@
 import './App.scss';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BsTwitter } from 'react-icons/bs'
 import { IconContext } from 'react-icons';
 
@@ -19,27 +18,26 @@ function App() {
     setQuote(data?.content)
     setAuthor(data?.author)
     setColor(randomColor)
-
   }
   useEffect(() => {
     handleClick()
   }, [])
 
   return (
-    <div className="App" style={{ backgroundColor: color }}>
-      <div id='quote-box'>
+    <div className="App" style={{ backgroundColor: color }} >
+      <div id='quoteBox'>
         <span id='text' style={{ color: color }}>"{quote}"</span>
         <span id='author' style={{ color: color }}>- {author}</span>
-        <div id='btn-container'>
-          <button id='new-quote' onClick={handleClick} style={{ backgroundColor: color }}>New Quote</button>
+        <div id='btnContainer'>
+          <button id='newQuote' onClick={handleClick} style={{ backgroundColor: color }}>New Quote</button>
           <a href={`https://twitter.com/intent/tweet?text=${quote}%20-${author}&hashtags=quotes`} id='tweet-quote'>
             <IconContext.Provider value={{ size: '2em', color: color }} >
-              <BsTwitter />
+              <BsTwitter id='twitterIcon' />
             </IconContext.Provider>
           </a>
         </div>
       </div>
-    </div >
+    </ div >
   );
 }
 
